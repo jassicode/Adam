@@ -11,7 +11,7 @@ const HeaderOne = ({ data, menuOptions }) => {
   const pathname = usePathname();
 
   return (
-    <header className={`z-[300] absolute top-0 w-full ${pathname !== "/" && "bg-white"}`}>
+    <header className={`z-[300] absolute text-base top-0 w-full ${pathname !== "/" && "bg-white"}`}>
       <section className="py-5 hidden xl:block text-theme-main header-gradient">
         <div className="container mx-auto">
           <div className="flex justify-between items-center gap-4">

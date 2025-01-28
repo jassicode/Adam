@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import "../../public/fonts/all/stylesheet.css";
 import "./globals.css";
 import "./style.css";
 import Footer from "@/components/footer/footer";
@@ -22,7 +23,7 @@ export const metadata = {
     icon: "/favicon.ico",
   },
 };
-
+/*
 const calibri = localFont({
   src: [
     {
@@ -42,7 +43,7 @@ const calibri = localFont({
     },
   ],
 })
-
+*/
 
 export default function RootLayout({
   children,
