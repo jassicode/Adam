@@ -13,7 +13,7 @@ const HeaderTwo = ({ data, menuOptions, slideFromTop }) => {
   const scrollPosition = useScrollPosition()
 
   return (
-    <header className={`py-3 w-full text-base fixed z-[200] hidden xl:block transition-all duration-500 ease-linear text-theme-main bg-white 
+    <header className={`py-3 w-full text-base hidden_header fixed z-[200] hidden xl:block transition-all duration-500 ease-linear text-theme-main bg-white 
       ${slideFromTop ? (scrollPosition > 100 ? "top-0" : "-top-[200px]") : "top-0"}
     `}>
       <div className="container mx-auto">

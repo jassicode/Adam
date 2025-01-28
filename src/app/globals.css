@@ -57,7 +57,7 @@ body,
 span {
   font-family: 'calibri',  sans-serif; 
 }
-
+.hidden_header{opacity: 0!important; visibility: hidden!important;}
 .container {
   max-width: 1337px !important;
 }

@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import MegaMenu from "./MegaMenu";
@@ -9,9 +9,15 @@ import RequestAQuoteButton from '@/components/RequestAQuoteButton'
 const HeaderOne = ({ data, menuOptions }) => {
   const { Button, Logo } = data
   const pathname = usePathname();
+  useEffect(() => {
+    const header = document.querySelector("header");
+    if (header) {
+      header.classList.remove("hidden_header"); // Replace with your actual class name
+    }
+  }, []);
 
   return (
-    <header className={`z-[300] absolute text-base top-0 w-full ${pathname !== "/" && "bg-white"}`}>
+    <header className={`z-[300] absolute hidden_header text-base top-0 w-full ${pathname !== "/" && "bg-white"}`}>
       <section className="py-5 hidden xl:block text-theme-main header-gradient">
         <div className="container mx-auto">
           <div className="flex justify-between items-center gap-4">
