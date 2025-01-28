@@ -1,5 +1,5 @@
 import Header from "@/components/header";
-//import "../../public/fonts/all/stylesheet.css";
+import "../../public/fonts/all/stylesheet.css";
 import "./globals.css";
 import "./style.css";
 import Footer from "@/components/footer/footer";
