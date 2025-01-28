@@ -63,7 +63,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`antialiased ${calibri.className}`}>
-        <Suspense fallback={<div class="loader_outer"><div><img src="/images/loader.svg" width="300px"/><div class="loader-line"></div></div></div>}>
+        <Suspense fallback={<div className="loader_outer"><div><img src="/images/loader.svg" width="300px"/><div className="loader-line"></div></div></div>}>
              
             
         <ToastContainer
