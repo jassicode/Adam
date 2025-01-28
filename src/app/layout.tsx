@@ -27,17 +27,17 @@ export const metadata = {
 const calibri = localFont({
   src: [
     {
-      path: '../../public/fonts/calibri/calibri-bold.woff',
+      path: '../../public/fonts/all/Calibri-Bold.woff2',
       weight: '700',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/calibri/calibri-light.woff',
+      path: '../../public/fonts/all/Calibri-Light.woff2',
       weight: '300',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/calibri/calibri-regular.woff',
+      path: '../../public/fonts/all/Calibri.woff2',
       weight: '400',
       style: 'normal',
     },

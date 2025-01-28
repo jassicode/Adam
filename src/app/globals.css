@@ -6,7 +6,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/*
 @font-face {
   font-family: 'calibri';
   font-weight: 700;
@@ -32,7 +32,7 @@
   src: local("Franklin Gothic Regular"),
   url("/fonts/fraklin/Franklin-Regular.woff");
 }
-
+*/
 body, a{font-size: 16px;}
 html {
   scroll-behavior: smooth;
