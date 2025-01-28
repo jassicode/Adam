@@ -63,9 +63,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`antialiased ${calibri.className}`}>
-        <Suspense fallback={<div className="loader_outer"><div><img src="/images/loader.svg" width="300px"/><div className="loader-line"></div></div></div>}>
-             
-            
+         
         <ToastContainer
           position="top-right"
           autoClose={5000}
@@ -80,7 +78,7 @@ export default function RootLayout({
         <VerticleIcon />
         <ScrollToTopButton />
         <DisableImageRightClick />
-        </Suspense>
+       
       </body>
     </html>
   );
