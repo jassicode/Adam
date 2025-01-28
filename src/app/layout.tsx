@@ -23,7 +23,7 @@ export const metadata = {
     icon: "/favicon.ico",
   },
 };
-/*
+
 const calibri = localFont({
   src: [
     {
@@ -43,7 +43,7 @@ const calibri = localFont({
     },
   ],
 })
-*/
+
 
 export default function RootLayout({
   children,
