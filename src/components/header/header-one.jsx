@@ -14,7 +14,7 @@ const HeaderOne = ({ data, menuOptions }) => {
     if (header) {
       header.classList.remove("hidden_header"); // Replace with your actual class name
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <header className={`z-[300] absolute hidden_header text-base top-0 w-full ${pathname !== "/" && "bg-white"}`}>
