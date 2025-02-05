@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import Link from "next/link";
 import Image from "next/image";
 import { CircularArrowRight } from "../../../public/icons";
+import { getFullImageURL } from '@/utils';
 
 const OtherServices = (props) => {
   const { Services, Image: serviceImage } = props;
@@ -60,7 +61,7 @@ const OtherServices = (props) => {
           <figure>
             <Image
               priority
-              src={serviceImage?.data?.attributes?.url}
+              src={getFullImageURL(serviceImage?.data?.attributes?.url)}
               alt="services-image"
               width={530}
               className="md:w-full h-full object-cover"

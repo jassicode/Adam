@@ -41,7 +41,7 @@ const Warehousing = (props) => {
         <section className="mt-6 md:mt-[71px] relative container mx-auto flex flex-col lg:flex-row gap-5 lg:gap-10 mb-6 lg:mb-20">
           <div className='lg:w-[30%] md:min-w-[464px]'>
             <IndustrialEnergyComp
-              video={video?.data?.attributes?.url}
+              video={getFullImageURL(video?.data?.attributes?.url)}
               caption={video_title}
             />
           </div>

@@ -45,7 +45,7 @@ const NewsAndEventDetailsTemplate = ({ data, content = {} }) => {
               className='w-full'
               alt={attributes?.title}
               style={{ objectFit: 'cover', objectPosition: 'center' }}
-              src={attributes?.Banner_Image?.data?.attributes?.url} width={1702} height={491}
+              src={getFullImageURL(attributes?.Banner_Image?.data?.attributes?.url)} width={1702} height={491}
             />
           </figure>
         </div>

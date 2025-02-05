@@ -4,6 +4,7 @@ import PageNavigation from "@/components/page-navigation/PageNavigation"
 import OtherServices from '@/components/other-services-slider/OtherServices'
 import ChooseAdamallys from '@/components/choose-adamallys/choose-adamallys'
 import SingleWrapperTwoColumnContent from '@/components/single-wrapper-two-column-content'
+import { getFullImageURL } from '@/utils';
 
 const ProvisionsAndBondedStoresTemplate = (props) => {
   const { banner_background_image, banner_info, banner_title, Cards, OtherServices: otherServicesData } = props;
@@ -16,7 +17,7 @@ const ProvisionsAndBondedStoresTemplate = (props) => {
         {...{
           title: banner_title,
           content: banner_info,
-          bgImage: banner_background_image?.data?.attributes?.url
+          bgImage: getFullImageURL(banner_background_image?.data?.attributes?.url)
         }}
       />
       <div className="lg:mt-[66px] ">
@@ -26,7 +27,7 @@ const ProvisionsAndBondedStoresTemplate = (props) => {
           title={Cards?.[0]?.title}
           caption={Cards?.[0]?.info}
           link={Cards?.[0]?.Link}
-          images={[Cards?.[0]?.Image?.data?.attributes?.url]}
+          images={[getFullImageURL(Cards?.[0]?.Image?.data?.attributes?.url)]}
         />
         <SingleWrapperTwoColumnContent
           isGradientBg
@@ -34,7 +35,7 @@ const ProvisionsAndBondedStoresTemplate = (props) => {
           title={Cards?.[1]?.title}
           caption={Cards?.[1]?.info}
           link={Cards?.[1]?.Link}
-          images={[Cards?.[1]?.Image?.data?.attributes?.url]}
+          images={[getFullImageURL(Cards?.[1]?.Image?.data?.attributes?.url)]}
         />
       </div>
       <ChooseAdamallys />

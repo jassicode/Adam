@@ -1,4 +1,4 @@
-<div class="loader_outer"><div><img src="public/images/loader.svg" width="300px"><div class="loader-line"></div></div></div>
+<meta name="viewport" content="width=device-width, initial-scale=1"/><div class="loader_outer"><div><img src="public/images/loader.svg" width="300px"><div class="loader-line"></div></div></div>
 
 <style>
     .loader_outer{position: fixed; left: 0; right: 0; bottom: 0; top: 0; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; z-index: 9999999;}
@@ -12,7 +12,9 @@
     border-radius: 0 0 0px 18px;
     margin-top: -28px;
     margin-left: 31px;
+    z-index: 0;
 }
+.loader_outer img{position: relative; z-index: 1;}
 
 @keyframes loading {
     0% {
@@ -21,5 +23,18 @@
     100% {
         width: 230px;
     }
+}
+
+@media(max-width: 768px) {
+    .loader_outer img {max-width: 180px;}
+    .loader-line {margin-left: 18px;margin-top: -19px;height: 16px;}
+    @keyframes loading {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 140px;
+    }
+}
 }
 </style>

@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react';
+import { getFullImageURL } from '@/utils';
 
 const DistributorsAndStockistsTemplate = ({ Cards, Banner }) => {
   const [expanded, setExpanded] = useState({});
@@ -12,7 +13,7 @@ const DistributorsAndStockistsTemplate = ({ Cards, Banner }) => {
     {
       link: card?.link,
       title: card?.title,
-      image: card?.Icon?.data?.attributes?.url,
+      image: getFullImageURL(card?.Icon?.data?.attributes?.url),
       description: card?.info,
     }
   ))
@@ -45,7 +46,7 @@ const DistributorsAndStockistsTemplate = ({ Cards, Banner }) => {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            backgroundImage: `url(${Banner?.Image?.data?.attributes?.url})`
+            backgroundImage: `url(${getFullImageURL(Banner?.Image?.data?.attributes?.url)})`
           }}
         >
           <div className="relative z-[2] px-8 hidden md:block">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { getFullImageURL } from '@/utils';
 
 function Logocard2({ data }) {
 
@@ -10,7 +11,7 @@ function Logocard2({ data }) {
             key={index}
             className="flex flex-col items-center mx-auto w-full max-w-[600px] h-auto sm:h-[300px] justify-center border border-gray-300 p-4   duration-300"
           >
-            <img src={card.Image?.data?.attributes?.url} alt={card.title} className="object-contain mb-4 w-[250px] h-[150px]" />
+            <img src={getFullImageURL(card.Image?.data?.attributes?.url)} alt={card.title} className="object-contain mb-4 w-[250px] h-[150px]" />
             <h2 className="text-center text-[18px] sm:text-[20px] lg:text-[22px] font-[700] text-[#171F7C]">
               {card.title}
             </h2>

@@ -67,7 +67,7 @@ const Milestones = ({ data }) => {
     <section
       ref={sectionRef}
       className="milestone_bg mx-[18px] md:mx-0 bg-center md:bg-right !bg-no-repeat !bg-cover"
-      style={{ backgroundImage: `url(${data?.Background_Image?.data?.attributes?.url})` }}
+      style={{ backgroundImage: `url(${getFullImageURL(data?.Background_Image?.data?.attributes?.url)})` }}
     >
       <div
         ref={bgRef}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Accordion from "../Accordion";
 import { getFooter } from "@/services";
+import { getFullImageURL } from '@/utils';
 
 const MobileFooter = async () => {
   const data = await getFooter()
@@ -14,7 +15,7 @@ const MobileFooter = async () => {
           <div>
             <Link href="/">
               <Image
-                src={Logo?.data?.attributes?.url}
+                src={getFullImageURL(Logo?.data?.attributes?.url)}
                 alt="logo"
                 width={126}
                 height={74}
@@ -118,17 +119,17 @@ const MobileFooter = async () => {
           <ul className="flex items-center gap-5">
             <li>
               <a target="_blank" href={data?.Socials[0]?.link || "#"}>
-                <Image src={data?.Socials[0]?.Icon?.data?.attributes?.url} alt="" width={8} height={14} />
+                <Image src={getFullImageURL(data?.Socials[0]?.Icon?.data?.attributes?.url)} alt="" width={8} height={14} />
               </a>
             </li>
             <li>
               <a target="_blank" href={data?.Socials[1]?.link || "#"}>
-                <Image src={data?.Socials[1]?.Icon?.data?.attributes?.url} alt="" width={13.6} height={15.5} />
+                <Image src={getFullImageURL(data?.Socials[1]?.Icon?.data?.attributes?.url)} alt="" width={13.6} height={15.5} />
               </a>
             </li>
             <li>
               <a target="_blank" href={data?.Socials[2]?.link || "#"}>
-                <Image src={data?.Socials[2]?.Icon?.data?.attributes?.url} alt="" width={13.5} height={1.5} />
+                <Image src={getFullImageURL(data?.Socials[2]?.Icon?.data?.attributes?.url)} alt="" width={13.5} height={1.5} />
               </a>
             </li>
           </ul>

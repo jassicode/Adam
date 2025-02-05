@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { getFooter } from '@/services'
 import Tooltip from '@/components/Tooltip'
+import { getFullImageURL } from '@/utils';
 
 const VerticleIcon = async () => {
   const { Side_Sticky_Links } = await getFooter()
@@ -24,7 +25,7 @@ const VerticleIcon = async () => {
               <span className='w-12 h-12 bg-white rounded-full flex flex-col border border-[#EDEDED] justify-center items-center'>
                 <Image
                   style={{ scale: (item?.Caption?.toLowerCase() === "mespas") ? 1.5 : item?.Caption?.toLowerCase() === "procureship" ? 1.3 : 1 }}
-                  src={item?.Icon?.data?.attributes?.url} alt="" width={20} height={20} className='w-[1.35rem]'
+                  src={getFullImageURL(item?.Icon?.data?.attributes?.url)} alt="" width={20} height={20} className='w-[1.35rem]'
                 />
               </span>
             </a>

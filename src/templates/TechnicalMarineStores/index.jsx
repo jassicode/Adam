@@ -1,3 +1,4 @@
+"use client"
 import Tags from "@/components/tags/tags"
 import GridContent from '@/components/grid-content'
 import ShipSupplyHeading from '@/components/ShipSupplyHeading'
@@ -8,10 +9,20 @@ import ChooseAdamallys from '@/components/choose-adamallys/choose-adamallys'
 import OneColumnContent from '@/components/one-column-content/two-column-content'
 import TwoColumnContent from "@/components/two-column-content/two-column-content"
 import ThreeColumnContent from "@/components/three-column-content/three-column-content"
+import { getFullImageURL } from '@/utils';
 
-const TechnicalMarineStoresTemplate = (props) => {
+const TechnicalMarineStoresTemplate = (props) => { //console.log(props,"huhyhy8h");
   const { banner_background_image, banner_info, banner_title, Tags: tags, Card, OtherServices: otherServicesData } = props;
   const tagList = tags?.map(({ list }) => list);
+ // console.log('tagList jass');
+  //console.log(Card);
+  //console.log(Card?.[3]?.image?.data?.attributes?.url,"dddddddddddddddd");
+
+  /*const cards = Card.map((datas)=>{
+    getFullImageURL(datas?.image?.data?.attributes?.url,"imagesbbgb")
+    console.log(datas?.title,"title")
+  })*/
+  //return 'dddd';
   return (
     <>
       <ShipSupplyHeading />
@@ -20,7 +31,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         {...{
           title: banner_title,
           content: banner_info,
-          bgImage: banner_background_image?.data?.attributes?.url
+          bgImage: getFullImageURL(banner_background_image?.data?.attributes?.url)
         }}
       />
       <Tags tags={tagList} />
@@ -29,7 +40,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[0]?.link}
         title={Card?.[0]?.title}
         caption={Card?.[0]?.info}
-        image={Card?.[0]?.image?.data?.attributes?.url}
+        image={getFullImageURL(Card?.[0]?.image?.data?.attributes?.url)}
         points={Card?.[0]?.lists?.map(({ list }) => list)}
       />
       <TwoColumnContent
@@ -39,7 +50,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[1]?.link}
         title={Card?.[1]?.title}
         caption={Card?.[1]?.info}
-        image={Card?.[1]?.image?.data?.attributes?.url}
+        image={getFullImageURL(Card?.[1]?.image?.data?.attributes?.url)}
         points={Card?.[1]?.lists?.map(({ list }) => list)}
       />
       <ThreeColumnContent
@@ -47,9 +58,9 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[2]?.link}
         title={Card?.[2]?.title}
         caption={Card?.[2]?.info}
-        image1={Card?.[2]?.image?.data?.attributes?.url}
+        image1={getFullImageURL(Card?.[2]?.image?.data?.attributes?.url)}
         points={Card?.[2]?.lists?.map(({ list }) => list)}
-        image2={Card?.[2]?.Secound_Image?.data?.attributes?.url || "/images/ship-supply/cabin-stores-two.png"}
+        image2={getFullImageURL(Card?.[2]?.Secound_Image?.data?.attributes?.url) || "/images/ship-supply/cabin-stores-two.png"}
       />
       <TwoColumnContent
         bgGray
@@ -59,7 +70,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[3]?.link}
         title={Card?.[3]?.title}
         caption={Card?.[3]?.info}
-        image={Card?.[3]?.image?.data?.attributes?.url}
+        image={getFullImageURL(Card?.[3]?.image?.data?.attributes?.url)}
         points={Card?.[3]?.lists?.map(({ list }) => list)}
       />
       <OneColumnContent
@@ -68,7 +79,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[4]?.link}
         title={Card?.[4]?.title}
         caption={Card?.[4]?.info}
-        image={Card?.[4]?.image?.data?.attributes?.url}
+        image={getFullImageURL(Card?.[4]?.image?.data?.attributes?.url)}
         points={Card?.[4]?.lists?.map(({ list }) => list)}
       />
       <TwoColumnContent
@@ -77,7 +88,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[5]?.link}
         title={Card?.[5]?.title}
         caption={Card?.[5]?.info}
-        image={Card?.[5]?.image?.data?.attributes?.url}
+        image={getFullImageURL(Card?.[5]?.image?.data?.attributes?.url)}
         points={Card?.[5]?.lists?.map(({ list }) => list)}
       />
       <TwoColumnContent
@@ -87,7 +98,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[6]?.link}
         title={Card?.[6]?.title}
         caption={Card?.[6]?.info}
-        image={Card?.[6]?.image?.data?.attributes?.url}
+        image={getFullImageURL(Card?.[6]?.image?.data?.attributes?.url)}
         points={Card?.[6]?.lists?.map(({ list }) => list)}
       />
       <ThreeColumnContent
@@ -95,16 +106,16 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[7]?.link}
         title={Card?.[7]?.title}
         caption={Card?.[7]?.info}
-        image1={Card?.[7]?.image?.data?.attributes?.url}
+        image1={getFullImageURL(Card?.[7]?.image?.data?.attributes?.url)}
         points={Card?.[7]?.lists?.map(({ list }) => list)}
-        image2={Card?.[7]?.Secound_Image?.data?.attributes?.url || "/images/ship-supply/safety-stores-image2.png"}
+        image2={getFullImageURL(Card?.[7]?.Secound_Image?.data?.attributes?.url) || "/images/ship-supply/safety-stores-image2.png"}
       />
       <TwoColumnContent
         id={tagList[8]}
         link={Card?.[8]?.link}
         title={Card?.[8]?.title}
         caption={Card?.[8]?.info}
-        image={Card?.[8]?.image?.data?.attributes?.url}
+        image={getFullImageURL(Card?.[8]?.image?.data?.attributes?.url)}
         points={Card?.[8]?.lists?.map(({ list }) => list)}
       />
       <ThreeColumnContent
@@ -112,16 +123,16 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[9]?.link}
         title={Card?.[9]?.title}
         caption={Card?.[9]?.info}
-        image1={Card?.[9]?.image?.data?.attributes?.url}
+        image1={getFullImageURL(Card?.[9]?.image?.data?.attributes?.url)}
         points={Card?.[9]?.lists?.map(({ list }) => list)}
-        image2={Card?.[9]?.Secound_Image?.data?.attributes?.url || "/images/ship-supply/stationary-two.png"}
+        image2={getFullImageURL(Card?.[9]?.Secound_Image?.data?.attributes?.url) || "/images/ship-supply/stationary-two.png"}
       />
       <OneColumnContent
         id={tagList[10]}
         link={Card?.[10]?.link}
         title={Card?.[10]?.title}
         caption={Card?.[10]?.info}
-        image={Card?.[10]?.image?.data?.attributes?.url}
+        image={getFullImageURL(Card?.[10]?.image?.data?.attributes?.url)}
         points={Card?.[10]?.lists?.map(({ list }) => list)}
       />
       <div className="hidden md:block" id={tagList[12]}>
@@ -142,7 +153,7 @@ const TechnicalMarineStoresTemplate = (props) => {
               points: Card?.[12]?.lists?.map(({ list }) => list),
             }
           ]}
-          images={[Card?.[11]?.image?.data?.attributes?.url, Card?.[12]?.image?.data?.attributes?.url]}
+          images={[getFullImageURL(Card?.[11]?.image?.data?.attributes?.ur), getFullImageURL(Card?.[12]?.image?.data?.attributes?.url)]}
         />
       </div>
       <div className="block md:hidden">
@@ -152,7 +163,7 @@ const TechnicalMarineStoresTemplate = (props) => {
           link={Card?.[11]?.link}
           title={Card?.[11]?.title}
           caption={Card?.[11]?.info}
-          image={Card?.[11]?.image?.data?.attributes?.url}
+          image={getFullImageURL(Card?.[11]?.image?.data?.attributes?.url)}
           points={Card?.[11]?.lists?.map(({ list }) => list)}
         />
         <TwoColumnContent
@@ -160,7 +171,7 @@ const TechnicalMarineStoresTemplate = (props) => {
           link={Card?.[12]?.link}
           title={Card?.[12]?.title}
           caption={Card?.[12]?.info}
-          image={Card?.[12]?.image?.data?.attributes?.url}
+          image={getFullImageURL(Card?.[12]?.image?.data?.attributes?.url)}
           points={Card?.[12]?.lists?.map(({ list }) => list)}
         />
       </div>
@@ -172,7 +183,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[13]?.link}
         title={Card?.[13]?.title}
         caption={Card?.[13]?.info}
-        image={Card?.[13]?.image?.data?.attributes?.url}
+        image={getFullImageURL(Card?.[13]?.image?.data?.attributes?.url)}
         points={Card?.[13]?.lists?.map(({ list }) => list)}
       />
       <ChooseAdamallys />

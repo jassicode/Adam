@@ -1,6 +1,7 @@
 import { getNewsAndEvents } from "@/services";
 import Main from "@/components/news-events/main";
 import Card from "@/components/news-events/card";
+import { getFullImageURL } from '@/utils'
 
 export default async function News() {
   const data = await getNewsAndEvents();
@@ -10,7 +11,7 @@ export default async function News() {
     title: attributes?.title,
     date: attributes?.Date,
     excerpt: attributes?.Excerpt,
-    image: attributes?.Image?.data?.attributes?.url,
+    image: getFullImageURL(attributes?.Image?.data?.attributes?.url),
   })) || [];
 
   const sortedNewsData = newsData?.sort((a, b) => new Date(b.date) - new Date(a.date));

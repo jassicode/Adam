@@ -3,6 +3,7 @@ import IndustrialEnergyComp from '@/components/IndustrialEngery'
 import ChooseAdamallys from '@/components/choose-adamallys/choose-adamallys'
 import OtherServices from "@/components/other-services-slider/OtherServices"
 import Accordion from '@/components/Accordion'
+import { getFullImageURL } from '@/utils';
 
 const IndustrialEnergy = (props) => {
   const { title, info, video_title, Video, KeyProducts, OtherServices: otherServicesData } = props;
@@ -29,7 +30,7 @@ const IndustrialEnergy = (props) => {
           <IndustrialEnergyComp
             isIndustrial
             caption={video_title}
-            image={Video?.data?.attributes?.url}
+            image={getFullImageURL(Video?.data?.attributes?.url)}
           />
         </div>
         <div className='lg:w-[70%] lg:mt-[-14px]'>

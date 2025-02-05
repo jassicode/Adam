@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { getWhyChoose } from '@/services'
 import ChooseCard from "./choose-card"
 import { useEffect, useState } from 'react';
+import { getFullImageURL } from '@/utils';
 
 const ChooseAdamallys = (props) => {
   const { description, title, image, } = props;
@@ -31,7 +32,7 @@ const ChooseAdamallys = (props) => {
           <Image
             priority
             alt={title || data?.title} width={530}
-            src={image || data?.Image?.data?.attributes?.url}
+            src={image || getFullImageURL(data?.Image?.data?.attributes?.url)}
             className='md:w-full h-full object-cover' height={description ? 360 : 670}
           />
         </figure>

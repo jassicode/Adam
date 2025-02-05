@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import TwoColumnContent from '@/components/two-column-content/two-column-content'
+import { getFullImageURL } from '@/utils';
 
 const SustainabilityTemplate = (props) => {
   const { Title, BannerContent, BannerImage, CSR_Image, Cards, Content, fst_content, sec_content, third_content } = props;
@@ -17,7 +18,7 @@ const SustainabilityTemplate = (props) => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          backgroundImage: `url(${BannerImage?.data?.[0]?.attributes?.url})`,
+          backgroundImage: `url(${getFullImageURL(BannerImage?.data?.[0]?.attributes?.url)})`,
         }}
         className={`w-full max-w-[100%] relative min-h-[288px] md:min-h-[615px] flex flex-col justify-end items-end`}>
         <div
@@ -38,7 +39,7 @@ const SustainabilityTemplate = (props) => {
           hideButton
           title={Cards?.[0]?.title}
           caption={Cards?.[0]?.info}
-          image={Cards?.[0]?.image?.data?.attributes?.url}
+          image={getFullImageURL(Cards?.[0]?.image?.data?.attributes?.url)}
           points={Cards?.[0]?.lists?.map(({ list }) => list)}
         />
       </div>
@@ -50,7 +51,7 @@ const SustainabilityTemplate = (props) => {
           hideButton
           title={Cards?.[1]?.title}
           caption={Cards?.[1]?.info}
-          image={Cards?.[1]?.image?.data?.attributes?.url}
+          image={getFullImageURL(Cards?.[1]?.image?.data?.attributes?.url)}
           points={Cards?.[1]?.lists?.map(({ list }) => list)}
         />
       </div>
@@ -58,7 +59,7 @@ const SustainabilityTemplate = (props) => {
         <div>
           <figure>
             <Image
-              src={CSR_Image?.data?.attributes?.url}
+              src={getFullImageURL(CSR_Image?.data?.attributes?.url)}
               width={1700}
               height={588}
               alt='marine-valves'
