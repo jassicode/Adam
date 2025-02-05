@@ -26,7 +26,7 @@ export default async function Home() {
 
   return (
     <>
-      
+      <Main data={Hero} Side_Sticky_Links={Side_Sticky_Links}/>
       <CertificationsAndMemberships data={CertificationsMemberships}/>
       <OurCompany data={Our_Company_Content}/>
       <Services data={ServiceCard}/>
