@@ -6,6 +6,7 @@ const nextConfig = {
       "res.cloudinary.com", 
       "adamallys-space.nyc3.digitaloceanspaces.com", 
       "nyc3.digitaloceanspaces.com",
+      "adamallysgroup.b-cdn.net",
       "adamallys-space.nyc3.cdn.digitaloceanspaces.com" ],
   },
 };
